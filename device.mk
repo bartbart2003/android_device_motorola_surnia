@@ -50,3 +50,7 @@ PRODUCT_PACKAGES += \
     stml0xx \
     sensors.msm8916 \
     sensorhub.msm8916
+
+# Ubuntu Touch
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/etc/init_hcismd_up.sh
