@@ -51,3 +51,6 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Sensors
 BOARD_USES_STML0XX_SENSOR_HUB := true
+
+# Charger
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(LOCAL_PATH)/charger/images
