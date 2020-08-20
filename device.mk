@@ -58,6 +58,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/70-android.rules:system/halium/lib/udev/rules.d/70-android.rules \
     $(LOCAL_PATH)/ubuntu/config-default.xml:system/halium/usr/share/powerd/device_configs/config-default.xml \
     $(LOCAL_PATH)/ubuntu/apparmor.d/abstractions/base:system/halium/etc/apparmor.d/abstractions/base \
+	$(LOCAL_PATH)/ubuntu/timekeeper.conf:system/halium/etc/init/timekeeper.conf \
     $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/etc/init_hcismd_up.sh
 
 # For off charging mode
