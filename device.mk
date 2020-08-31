@@ -59,13 +59,20 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/config-default.xml:system/halium/usr/share/powerd/device_configs/config-default.xml \
     $(LOCAL_PATH)/ubuntu/apparmor.d/abstractions/base:system/halium/etc/apparmor.d/abstractions/base \
     $(LOCAL_PATH)/ubuntu/timekeeper.conf:system/halium/etc/init/timekeeper.conf \
-    $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/etc/init_hcismd_up.sh
+    $(LOCAL_PATH)/ubuntu/init_hcismd_up.sh:system/etc/init_hcismd_up.sh \
+    $(LOCAL_PATH)/ubuntu/setupusb:system/halium/usr/share/usbinit/setupusb \
+    $(LOCAL_PATH)/ubuntu/rsyslog.conf:system/halium/etc/rsyslog.conf \
+    $(LOCAL_PATH)/ubuntu/mtp-state.conf:system/halium/etc/init/mtp-state.conf
 
 # For off charging mode
 PRODUCT_PACKAGES += \
     charger_res_images
 
+# aethercastctl
+PRODUCT_PROPERTY_OVERRIDES += \
+    ubuntu.widi.supported=1
+
 # telepathy-ofono quirks, ril selection
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.t-o.quirk.forcesink=sink.primary_output \
-    ro.t-o.quirk.forcesource=source.primary_input
+    ro.t-o.quirk.forcesink=sink.primary \
+    ro.t-o.quirk.forcesource=source.primary

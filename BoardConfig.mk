@@ -53,4 +53,4 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 BOARD_USES_STML0XX_SENSOR_HUB := true
 
 # Charger
-BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(LOCAL_PATH)/charger/images
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := device/motorola/surnia/charger/images
